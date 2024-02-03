@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El Templo</title>
+    <link rel="icon" href="/static/img/elTemploLogo.jpeg" type="image/x-icon"/>
+    <link rel="stylesheet" href="/static/style.css">
+    {% block more %}
+
+
+    {% endblock %}
+</head>
+<body>
+<!-- NAV BAR -->
+
+<nav class="menu">
+    <ul class="menu__list">
+        <li class="list__element"><a href="{{ url_for("home") }}">Inicio</a></li>
+        <li class="list__element"><a href="{{ url_for("nosotros") }}">Sobre nosotros</a></li>
+        <li class="list__element"><a href="{{ url_for("contacto") }}">Contacto</a></li>
+        <li class="list__element"><a href="{{ url_for("precios") }}">Precios</a></li>
+    </ul>
+</nav>
+
+{% block content %}
+
+
+
+{% endblock %}
+
+<footer class="page-wrapper">
+    <div id="waterdrop"></div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+
+<script> jQuery('#waterdrop').raindrops({color: 'rgb(174, 44, 49)', canvasHeight: 150, density: 0.1, frequency: 20});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <form class="container" method="POST" action="/contacto">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>CONTACTA</span>
+                        <span>Con el Templo</span>
+                    </div>
+                    <div class="app-contact">LLAMANOS AL : +34 000 000 000</div>
+                </div>
+                <div class="screen-body-item">
+                    <div class="app-form">
+                        <div class="app-form-group">
+                            {{ form.name(class="app-form-control", placeholder="nombre") }}
+                        </div>
+                        <div class="app-form-group">
+                            {{ form.email(class="app-form-control", placeholder="email") }}
+                        </div>
+                        <div class="app-form-group message">
+                            {{ form.message(class="app-form-control", placeholder="mensaje") }}
+                        </div>
+                        <div class="app-form-group buttons">
+                            {{ form.submit(class="app-form-button", text="ENVIAR") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+{% endblock %}
